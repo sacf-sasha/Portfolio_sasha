@@ -1,0 +1,15 @@
+body{
+    font-weight: 1000;
+}
+#button {
+    margin: 10px;
+    color: black;
+    border-radius: 4px;
+    font-weight: 1000;
+}
+#green{
+    color: green;
+}
+#red{
+    color: red;
+}

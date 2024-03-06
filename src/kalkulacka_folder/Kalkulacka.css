@@ -1,0 +1,15 @@
+#kalkulacka{
+    width: 200px;
+    text-align: center;
+}
+#displaj{
+    margin: 10px;
+    font-size: 30px;
+}
+
+#tlacitka{
+    font-weight: bold;
+    margin: 2px;
+    background-color: plum;
+    border-radius: 3px; 
+}
