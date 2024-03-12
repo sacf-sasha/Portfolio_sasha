@@ -37,7 +37,12 @@ export default function Layout() {
                 <li>
                     <Button href="/aplikace_hodnoceni">Aplikace hodnocení</Button>
                 </li>
-
+                <li>
+                    <Button href="/eshop">Eshop</Button>
+                </li>
+                <li>
+                    <Button href="/coffee">Coffee</Button>
+                </li>
 
 
             </ul>
