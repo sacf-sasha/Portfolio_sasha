@@ -1,51 +1,27 @@
-import {Outlet, Link} from "react-router-dom"
+import {Outlet, Link, } from "react-router-dom"
 import Button from '@mui/material/Button';
-
+import Muilink from '@mui/material/Link';
 
 export default function Layout() {
     return (
     <>
         <nav>
-            <ul>
-                <li>
-                    <Button href="/">Home</Button>
-                </li>
-                <li>
-                    <Button href="/blogs">Blogs</Button>
-                </li>
-                <li>
-                    <Button href="/contact">Contact</Button>
-                </li>
-                <li>
-                    <Button href="/kalkulacka">Kalkulacka</Button>
-                </li>
-                <li>
-                    <Button href="/pocitadlo">Pocitadlo</Button>
-                </li>
-                <li>
-                    <Button href="/pocitadlo_a_barva">pocitadlo a barva</Button>
-                </li>
-                <li>
-                    <Button href="/ukolnicek">Ukolnicek</Button>
-                </li>
-                <li>
-                    <Button href="/pridavadlo">Pridavadlo</Button>
-                </li>
-                <li>
-                    <Button href="/prumer">prumer</Button>
-                </li>
-                <li>
-                    <Button href="/aplikace_hodnoceni">Aplikace hodnocení</Button>
-                </li>
-                <li>
-                    <Button href="/eshop">Eshop</Button>
-                </li>
-                <li>
-                    <Button href="/coffee">Coffee</Button>
-                </li>
 
+            <Muilink variant="h5" href="/Portfolio_sasha/#">Home</Muilink> <li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/*">Blogs</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/contact">Contact</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/kalkulacka">Kalkulacka</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/pocitadlo">Pocitadlo</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/pocitadlo_a_barva">pocitadlo a barva</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/ukolnicek">Ukolnicek</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/pridavadlo">Pridavadlo</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/prumer">prumer</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/aplikace_hodnoceni">Aplikace hodnocení</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#eshop">Eshop</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/eshop2">Eshop_2</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/coffee">Coffee</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink variant="h5" href="/Portfolio_sasha/#/oblibena_barva">Oblibena barva</Muilink><li style={{listStyleType: "none"}} />
 
-            </ul>
         </nav>
         <Outlet/>       
     </>
