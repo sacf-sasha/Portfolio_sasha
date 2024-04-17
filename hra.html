@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="herniPole" width="600" height="500"></canvas>
+
+    <button onclick="spustHru()">spustit kód</button>
+
+    <script>
+
+        var x = 250
+        var y = 280
+
+        function spustHru() {
+            herniPole.start()
+            herniObjekt = new vytvorObjekt(20, 20,"green",265,470)
+            herniObjekt2 = new vytvorObjekt(10, 10,"red",60,0)
+            herniObjekt3 = new vytvorObjekt(10, 10,"red",120,60)
+            herniObjekt4 = new vytvorObjekt(10, 10,"red",180,120)
+            herniObjekt5 = new vytvorObjekt(10, 10,"red",240,180)
+            herniObjekt6 = new vytvorObjekt(10, 10,"red",300,240)
+            herniObjekt7 = new vytvorObjekt(10, 10,"red",360,300)
+            herniObjekt8 = new vytvorObjekt(10, 10,"red",420,360)
+                    
+        }
+
+        var herniPole = {
+            canvas: document.getElementById("herniPole"),
+            start: function(){
+                this.context = this.canvas.getContext("2d")
+                this.interval = setInterval(vykresliHerniPole, 50)
+                window.addEventListener("keydown", function(){
+                    if (event.key === "d"){
+                        if (herniObjekt.x < herniPole.canvas.width - herniObjekt.sirka) {
+                            herniObjekt.x += 5
+                        }
+                    } else if(event.key === "a"){
+                        if (herniObjekt.x > herniObjekt.sirka) {
+                            herniObjekt.x -= 5
+                        }
+                    } else if(event.key === "s"){
+                        if (herniObjekt.y < herniPole.canvas.height - herniObjekt.vyska) {
+                            herniObjekt.y += 5
+                        }
+                    } else if(event.key === "w"){
+                        if (herniObjekt.y > herniObjekt.vyska) {
+                            herniObjekt.y -= 5
+                        }
+                    } 
+                })
+            }, 
+            vymaz: function(){
+                this.context.clearRect(0,0,this.canvas.width, this.canvas.height)
+            }
+        }
+
+        function vytvorObjekt(sirka, vyska, barva, souradniceX, souradniceY) {
+            this.sirka = sirka
+            this.vyska = vyska
+            this.x = souradniceX
+            this.y = souradniceY
+            this.puvodniX = souradniceX
+            this.puvodniY = souradniceY
+            this.barva = barva
+            this.vykresliObjekt = function(){
+            context = herniPole.context
+            context.fillStyle = barva
+            context.fillRect(this.x, this.y, this.sirka, this.vyska)
+            }
+            this.posunPoY = function(velikostPosunu) {
+                if (this.y <= 0) {
+                    this.y = this.puvodniY
+                    
+                }
+                else if (this.y >= herniPole.canvas.height) {
+                    this.y = 0
+                    this.x = Math.random() * herniPole.canvas.width
+                } 
+                this.y -= velikostPosunu
+                this.vykresliObjekt()
+
+                
+            }
+        }
+
+        
+        function vykresliHerniPole() {
+            herniPole.vymaz()
+            herniObjekt.vykresliObjekt()
+            herniObjekt2.posunPoY(-10)
+            herniObjekt3.posunPoY(-10)
+            herniObjekt4.posunPoY(-10)
+            herniObjekt5.posunPoY(-10)
+            herniObjekt6.posunPoY(-10)
+            herniObjekt7.posunPoY(-10)
+            herniObjekt8.posunPoY(-10)
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
