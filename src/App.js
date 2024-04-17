@@ -15,8 +15,10 @@ import Aplikace_hodnoceni from './aplikace_hodnoceni_folder/Aplikace_hodnoceni.j
 import Eshop from './eshop_folder/Eshop.js'
 import Eshop2 from './eshop_folder/Eshop2.js'
 import NastavOblibenuBarvu from './nastav_oblibenu_barvu_folder/NastavOblibenuBarvu.js'
-import oblibenaBarva from "./nastav_oblibenu_barvu_folder/Ctverec.js"
 import { useState, useEffect } from 'react';
+import SvojiStranka from "./svoji_stranka_folder/SvojiStranka.js"
+import Game from './game_folder/Game.js'
+import GameOfNumber from './game_folder/GameOfNubmer.js'
 
 export default function App() {
   const [barva, nastavBarvu] = useState(localStorage.getItem("barva"));
@@ -43,6 +45,10 @@ export default function App() {
         <Route path="/eshop2" element={<Eshop2 />} />
         <Route path="/eshop" element={<Eshop />} />
         <Route path="/oblibena_barva" element={<NastavOblibenuBarvu barva={barva} nastavBarvu={nastavBarvu} />} />
+        <Route path="/SvojiStranka" element={<SvojiStranka/>} />
+        <Route path="/Game" element={<Game/>} />
+        <Route path="/GameOfNumber" element={<GameOfNumber/>} />
+
         <Route path="*" element={<NoPage />} />
         {/* </Route> */}
       </Routes>

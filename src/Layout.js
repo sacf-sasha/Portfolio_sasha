@@ -21,6 +21,9 @@ export default function Layout(props) {
             <Muilink style={{color: props.barva}} variant="h5" href="/Portfolio_sasha/#/eshop2">Eshop_2</Muilink><li style={{listStyleType: "none"}} />
             <Muilink style={{color: props.barva}} variant="h5" href="/Portfolio_sasha/#/coffee">Coffee</Muilink><li style={{listStyleType: "none"}} />
             <Muilink style={{color: props.barva}} variant="h5" href="/Portfolio_sasha/#/oblibena_barva">Oblibená barva</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink style={{color: props.barva}} variant="h5" href="/Portfolio_sasha/#/SvojiStranka">Svoji Stranka</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink style={{color: props.barva}} variant="h5" href="/Portfolio_sasha/#/Game">Hra</Muilink><li style={{listStyleType: "none"}} />
+            <Muilink style={{color: props.barva}} variant="h5" href="/Portfolio_sasha/#/GameOfNumber">Hra čisel</Muilink><li style={{listStyleType: "none"}} />
 
         </nav>
         <Outlet/>       
